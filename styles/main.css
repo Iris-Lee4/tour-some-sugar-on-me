@@ -1,0 +1,40 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: whitesmoke;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+.bottom {
+	display: flex;
+	padding-top: 1rem; 
+	width: 100%;
+}
+
+.details {
+    margin: 0 2rem;
+    border: 1px dotted goldenrod;
+    padding: 0 0.75rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+.bands, .venues {
+	width: 50%;
+}
+
+body {
+	margin: 2em;
+}
