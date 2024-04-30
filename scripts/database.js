@@ -16,7 +16,7 @@ const database = {
         date: '7/10/2024'
     }, {
         id: 4,
-        bandName: 'Monophonics',
+        bandName: 'Japanese Breakfast',
         venueName: 'The Arena',
         date: '7/10/2024'
     }, {
@@ -31,7 +31,7 @@ const database = {
         date: '8/11/2024'
     }, {
         id: 7,
-        bandName: 'Monophonics',
+        bandName: 'Japanese Breakfast',
         venueName: 'The Ampitheater',
         date: '10/11/2024'
     }], 
@@ -67,10 +67,95 @@ const database = {
         genre:'Electronic',
         formation: 2012
     }, {
-        name:'Monophonics',
-        members: 8,
-        genre:'Psychedelic Soul',
-        formation: 2012
+        name:'Japanese Breakfast',
+        members: 4,
+        genre:'Alt Pop',
+        formation: 2013
+    }],
+    members: [{
+        id: 1,
+        firstName: 'Romy',
+        lastName: 'Madley Croft',
+        yearBorn: 1989,
+        role: 'vocals, guitar',
+        bandName: 'The xx'
+    }, {
+        id: 2,
+        firstName: 'Oliver',
+        lastName: 'Sim',
+        yearBorn: 1989,
+        role: 'vocals, bass, guitar',
+        bandName: 'The xx'
+    }, {
+        id: 3,
+        firstName: 'Jamie',
+        lastName: 'xx',
+        yearBorn: 1988,
+        role: 'synthesizers, drums, keyboards, etc',
+        bandName: 'The xx'
+    }, {
+        id: 4,
+        firstName: 'Alex',
+        lastName: 'Trimble',
+        yearBorn: 1989,
+        role: 'lead vocals, guitar, keyboard, etc',
+        bandName: 'Two Door Cinema Club'
+    }, {
+        id: 5,
+        firstName: 'Sam',
+        lastName: 'Halliday',
+        yearBorn: 1988,
+        role: 'lead guitar, synth, vocals',
+        bandName: 'Two Door Cinema Club'
+    }, {
+        id: 6,
+        firstName: 'Kevin',
+        lastName: 'Baird',
+        yearBorn: 1990,
+        role: 'bass, synth, keyboards',
+        bandName: 'Two Door Cinema Club'
+    }, {
+        id: 7,
+        firstName: 'Harrison',
+        lastName: 'Mills',
+        yearBorn: 1990,
+        role: 'all the things',
+        bandName: 'ODESZA'
+    }, {
+        id: 8,
+        firstName: 'Clayton',
+        lastName: 'Knight',
+        yearBorn: 1990,
+        role: 'all the things',
+        bandName: 'ODESZA'
+    }, {
+        id: 9,
+        firstName: 'Michelle',
+        lastName: 'Zauner',
+        yearBorn: 1989,
+        role: 'lead vocals, guitar',
+        bandName: 'Japanese Breakfast'
+    }, {
+        id: 10,
+        firstName: 'Craig',
+        lastName: 'Hendrix',
+        yearBorn: 1989,
+        role: 'drums, percussion, keyboards',
+        bandName: 'Japanese Breakfast'
+    }, {
+        id: 11,
+        firstName: 'Devin',
+        lastName: 'Craige',
+        yearBorn: 1989,
+        role: 'bass',
+        bandName: 'Japanese Breakfast'
+    }, {
+        id: 12,
+        firstName: 'Peter',
+        lastName: 'Bradley',
+        yearBorn: 1989,
+        role: 'guitar',
+        bandName: 'Japanese Breakfast'
     }]
 }
 
@@ -85,3 +170,7 @@ export const getVenues = () => {
 export const getBands = () => {
     return database.bands.map(band => ({...band}))
 };
+
+export const getMembers = () => {
+    return database.members.map(member => ({...member}))
+}

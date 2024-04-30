@@ -1,7 +1,8 @@
-import { getBands, getBookings } from "./database.js";
+import { getBands, getBookings, getMembers } from "./database.js";
 
 const bands = getBands();
 const bookings = getBookings();
+const members = getMembers();
 
 document.addEventListener(
     'click',
@@ -9,12 +10,18 @@ document.addEventListener(
         const itemClicked = clickEvent.target
         if (itemClicked.dataset.type === 'band') {
             let venuesList = "";
+            let membersList = "";
+            for (const member of members) {
+                if(itemClicked.dataset.name === member.bandName) {
+                    membersList += `${member.firstName} ${member.lastName} (${member.role})\n`;
+                }
+            }
             for (const booking of bookings) {
                 if (itemClicked.dataset.name === booking.bandName) {
                     venuesList += `\n${booking.venueName}`;
                 }
             }
-            window.alert(`${itemClicked.dataset.name} is playing at ${venuesList}`)
+            window.alert(`${membersList}\nUpcoming shows: ${venuesList}`)
         }
     }
 )
